@@ -21,7 +21,7 @@ jobs:
         with:
             base_branch: main
         secrets:
-            RELEASE_DRAFTER_TOKEN: ${{ secrets.RELEASE_DRAFTER_TOKEN }}
+            PERSONAL_ACCESS_TOKEN: ${{ secrets.RELEASE_DRAFTER_TOKEN }}
         permissions:
             contents: write
             pull-requests: write
