@@ -10,4 +10,9 @@ jobs:
         with:
             release_tag: ${{ github.ref_name }}
             repository_name: ${{ github.repository }}
-        secrets: inherit
+        secrets:
+            PERSONAL_ACCESS_TOKEN: ${{ secrets.RELEASE_DRAFTER_TOKEN }}
+            GOOGLE_OAUTH_REFRESH_TOKEN: ${{ secrets.GOOGLE_OAUTH_REFRESH_TOKEN }}
+            GOOGLE_OAUTH_CLIENT_ID: ${{ secrets.GOOGLE_OAUTH_CLIENT_ID }}
+            GOOGLE_OAUTH_CLIENT_SECRET: ${{ secrets.GOOGLE_OAUTH_CLIENT_SECRET }}
+            GOOGLE_SHEET_ID: ${{ secrets.GOOGLE_SHEET_ID }}
